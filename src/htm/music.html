@@ -1,0 +1,23 @@
+<ul class="songList">
+    <%for (var i = 0; i < showapi_res_body.pagebean.maxResult; i++) {%>
+    <li src="<%=showapi_res_body.pagebean.contentlist[i].m4a%>" index="<%=i%>"
+        class="<%=(i==0 ? 'active' :'')%>">
+        <h2>
+            <span><%=showapi_res_body.pagebean.contentlist[i].songname%></span>
+            <span class="band"></span>
+        </h2>
+        <p>
+            <strong><%=showapi_res_body.pagebean.contentlist[i].singername%></strong>
+            <span>网络音乐</span>
+            <span class="now"></span>
+        </p>
+        <div class="progress">
+            <span class="buffer"></span>
+            <span class="playing"></span>
+        </div>
+        <div class="detail">&gt;</div>
+    </li>
+    <%}%>
+    <audio src="" id="musicAudio" loop></audio>
+</ul>
+

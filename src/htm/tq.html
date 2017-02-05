@@ -1,0 +1,44 @@
+<div class="today">
+    <p class="location">
+        <span class="icon"><%=showapi_res_body.cityInfo.c5%></span><!--地名-->
+        <time><%=date%></time><!--时间-->
+    </p>
+    <p class="temp">
+        <span class="wd"><i><%=showapi_res_body.f3.night_air_temperature%></i>°/<i><%=showapi_res_body.f3.day_air_temperature%></i>°</span>
+        <!--温度-->
+        <span class="tq"><%=showapi_res_body.now.weather%></span><!--天气-->
+    </p>
+    <p class="air">
+        <span class="pm">PM2.5：<i><%=showapi_res_body.now.aqiDetail.pm2_5%></i><i><%=showapi_res_body.now.aqiDetail.quality%></i></span>
+        <!--PM2.5：141中度污染-->
+        <span class="wind"><i><%=showapi_res_body.now.wind_direction%></i><i><%=showapi_res_body.now.wind_power%></i></span>
+        <!--南风小于三级-->
+    </p>
+    <p class="nowImg">
+        <img src="<%=showapi_res_body.f1.day_weather_pic%>" alt=""><!--天气图-->
+    </p>
+</div>
+<ul class="forcast" id="forcast">
+    <li>
+        <span><%=showapi_res_body.f1.xq%></span>
+        <img src="<%=showapi_res_body.f1.day_weather_pic%>" alt="">
+        <span class="tq"><%=showapi_res_body.f1.tq%></span><!--天气-->
+        <span class="wd"><i><%=showapi_res_body.f1.night_air_temperature%></i>°/<i><%=showapi_res_body.f1.day_air_temperature%></i>°</span>
+        <!--温度-->
+    </li>
+    <li>
+        <span><%=showapi_res_body.f2.xq%></span>
+        <img src="<%=showapi_res_body.f2.day_weather_pic%>" alt="">
+        <span class="tq"><%=showapi_res_body.f2.tq%></span><!--天气-->
+        <span class="wd"><i><%=showapi_res_body.f2.night_air_temperature%></i>°/<i><%=showapi_res_body.f2.day_air_temperature%></i>°</span>
+        <!--温度-->
+    </li>
+    <li>
+        <span><%=showapi_res_body.f3.xq%></span>
+        <img src="<%=showapi_res_body.f3.day_weather_pic%>" alt="">
+        <span class="tq"><%=showapi_res_body.f3.tq%></span><!--天气-->
+        <span class="wd"><i><%=showapi_res_body.f3.night_air_temperature%></i>°/<i><%=showapi_res_body.f3.day_air_temperature%></i>°</span>
+        <!--温度-->
+    </li>
+</ul>
+<p class="pubTime"><%=showapi_res_body.time%></p><!--发布时间：2016-12-24 16：59：06-->

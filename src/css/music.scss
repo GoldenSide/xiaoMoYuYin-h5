@@ -1,0 +1,141 @@
+//-------------------------------
+$baseFontSize: 32px !default;
+$c1: #dedfe0;
+$c2: #515151;
+$c3: #737373;
+$c4: #66abe0;
+$c5: #9b9b9b;
+$c6: #ccc;
+$c7: #e5e5e5;
+$c8: #cecece;
+$c9: #68ace0;
+
+// pixels to rems
+@function pxToRem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+
+body {
+  font-size: $baseFontSize;
+}
+
+//-------------------------------
+.songList {
+  li {
+    position: relative;
+    height: pxToRem(82px);
+    padding: pxToRem(28px) 0 pxToRem(22px) pxToRem(36px);
+    border-top: 1px solid $c1;
+    h2,
+    p {
+      width: pxToRem(470px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    h2 {
+      height: pxToRem(46px);
+      line-height: pxToRem(46px);
+      font-size: pxToRem(34px);
+      letter-spacing: 1px;
+      color: $c2;
+      span {
+        float: left;
+      }
+      .band {
+        display: none;
+        width: pxToRem(34px);
+        height: pxToRem(34px);
+        margin-left: pxToRem(12px);
+        background: url(../img/wave.gif) no-repeat 0 0;
+        background-size: 100% 100%;
+      }
+    }
+    p {
+      height: pxToRem(36px);
+      letter-spacing: 1px;
+      color: $c3;
+      strong {
+        float: left;
+        margin-right: pxToRem(16px);
+        font-size: pxToRem(24px);
+        line-height: pxToRem(36px);
+        vertical-align: baseline;
+      }
+      span {
+        float: left;
+        margin-right: pxToRem(16px);
+        font-size: pxToRem(18px);
+        line-height: pxToRem(36px);
+        vertical-align: baseline;
+      }
+      .now {
+        display: none;
+        letter-spacing: 0;
+      }
+    }
+    .progress {
+      display: none;
+      position: relative;
+      width: pxToRem(612px);
+      height: pxToRem(4px);
+      background: $c7;
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+      }
+      .buffer {
+        z-index: 1;
+        background: $c8;
+      }
+      .playing {
+        z-index: 2;
+        background: $c9;
+      }
+    }
+    .detail {
+      position: absolute;
+      right: pxToRem(36px);
+      top: pxToRem(46px);
+      width: pxToRem(37px);
+      height: pxToRem(37px);
+      border: 2px solid $c5;
+      border-radius: 50%;
+      font-size: pxToRem(37px);
+      line-height: pxToRem(37px);
+      text-align: center;
+      color: $c5;
+    }
+  }
+
+  .hover {
+    background: $c6;
+  }
+
+  .active {
+    color: $c4;
+    h2,
+    p,
+    .detail {
+      color: $c4;
+      border-color: $c4;
+    }
+    h2 {
+      .band {
+        display: block;
+      }
+    }
+    p {
+      .now {
+        display: block;
+      }
+    }
+    .progress {
+      display: block;
+    }
+  }
+
+}
