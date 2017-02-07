@@ -40,16 +40,19 @@
   line-height: 2.3125rem;
 }
 
-.header .txt:after {
+#write {
   position: absolute;
   right: 0;
   top: .40625rem;
+}
+
+#write:after {
   content: '\0048';
   font-size: 1.5rem;
 }
 
 .close:before {
-  content: '\004d';
+  content: '\004f';
 }
 
 .listen:before {

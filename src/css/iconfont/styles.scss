@@ -9,61 +9,7 @@
     display: block;
 }
 
-/*1.html*/
 .icon:before,
 .icon:after {
     font-family: iconf;
 }
-
-.speek .icon:after {
-    content: '\0049';
-    display: block;
-    margin-top: 1rem;
-    font-size: 1rem;
-    line-height: 1rem;
-}
-
-.nav .left:before {
-    content: '\004a';
-    display: block;
-    height: 2rem;
-    margin-top: .375rem;
-    font-size: 1.6875rem;
-    line-height: 1.6875rem;
-}
-
-.nav .middle:before {
-    content: '\004b';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 2.7rem;
-    height: 2.7rem;
-    margin: -1.35rem 0 0 -1.35rem;
-    font-size: 2.7rem;
-    line-height: 2.7rem;
-    text-align: center;
-}
-
-.nav .right:before {
-    content: '\004c';
-    display: block;
-    height: 2rem;
-    margin-top: .375rem;
-    font-size: 1.6875rem;
-    line-height: 1.6875rem;
-}
-
-/*1.html*/
-
-/*weather.css*/
-.location span:before {
-    content: '\004e';
-    position: absolute;
-    left: -1rem;
-    top: .5rem;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-}
-
-/*weather.css*/

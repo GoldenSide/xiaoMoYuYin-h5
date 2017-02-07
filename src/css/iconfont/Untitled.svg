@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg>
 <metadata>
-Created by FontForge 20090622 at Wed Dec 28 15:50:37 2016
+Created by FontForge 20090622 at Mon Feb  6 12:06:13 2017
  By deploy user
 </metadata>
 <defs>
@@ -19,7 +19,7 @@ Created by FontForge 20090622 at Wed Dec 28 15:50:37 2016
     bbox="-114 11 707 830"
     underline-thickness="50"
     underline-position="-50"
-    unicode-range="U+000D-U+004E"
+    unicode-range="U+000D-U+004F"
   />
 <missing-glyph horiz-adv-x="500" 
  />
@@ -92,5 +92,7 @@ q-2 -1 -5 -1q-13 0 -16 12q-5 15 11 22q47 16 85.5 44.5t66 67t42.5 84.5t15 96t-15 
     <glyph glyph-name="N" unicode="N" 
 d="M297 716q47 0 88.5 -17.5t72 -48t48.5 -71.5t18 -87q0 -23 -10 -51.5t-26 -58.5t-36.5 -61t-41.5 -59q-50 -67 -113 -137q-64 70 -113 137q-21 28 -41.5 59t-36.5 61t-25.5 58.5t-9.5 51.5q0 46 17.5 87t48.5 71.5t72 48t88 17.5zM297 381q22 0 42 8.5t35 23.5t23.5 34.5
 t8.5 41.5t-8.5 42t-23.5 35t-35 23.5t-42 8.5t-41.5 -8.5t-34.5 -23.5t-23.5 -35t-8.5 -42t8.5 -41.5t23.5 -34.5t34.5 -23.5t41.5 -8.5z" />
+    <glyph glyph-name="O" unicode="O" 
+d="M697 69q10 -10 10 -24t-10 -24t-24 -10q-15 0 -24 10l-351 351l-352 -351q-9 -10 -24 -10q-14 0 -24 10t-10 24t10 24l351 351l-351 352q-10 10 -10 24t10 24t24 10t24 -10l352 -351l351 351q10 10 24 10t24 -10t10 -24t-10 -25l-351 -351z" />
   </font>
 </defs></svg>

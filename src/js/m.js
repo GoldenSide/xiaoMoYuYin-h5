@@ -32,7 +32,11 @@
             // $('#load').hide();//去掉加载动画
             // $('#content').show();//显示天气
             var str = area + day + json.showapi_res_body.f1.tq;//播放某天的天气
-            //window.jsm.startTts(str);
+            try {
+                window.jsm.startTts(str);
+            } catch (e) {
+                console.log(e);
+            }
             this.creatHtml('../htm/tq.html', 'html', json, function () {//请求模板，渲染页面
 
             });
@@ -78,7 +82,11 @@
             // $('#load').hide();//去掉加载动画
             // $('#content').show();//显示天气
             var str = '为您找到以下音乐';//播放某天的天气
-            //window.jsm.startTts(str);
+            try {
+                window.jsm.startTts(str);
+            } catch (e) {
+                console.log(e);
+            }
             this.creatHtml('../htm/music.html', 'html', data, function () {//请求模板，渲染页面
                 _this.musicEvent();
             });
@@ -206,6 +214,8 @@
     //测试音乐详情
     // var module = new M();
     // module.musicDetailM();
+
+
 
 
 })(window);

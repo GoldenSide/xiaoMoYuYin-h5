@@ -9,11 +9,11 @@
     $.extend(Iat.prototype, {
         init: function (json) {
             this.json = JSON.parse(json);
-            // var str = 'service=' + this.data.service
-            //     + ';operation=' + this.data.operation
-            //     + ';semantic=' + this.data.semantic
-            //     + ';text=' + this.data.text;
-            // alert(str);
+            var str = 'service=' + this.data.service
+                + ';operation=' + this.data.operation
+                + ';semantic=' + this.data.semantic
+                + ';text=' + this.data.text;
+            alert(str);
             $('#result').val(this.json.text);
             this.choose();
         },
@@ -35,13 +35,21 @@
                 var module = new M();
                 module.weatherM(location, datetime);
             } else {
-                //window.jsm.startTts('抱歉，没有找到相关信息');//TTS语音播报
+                try {
+                    window.jsm.startTts('抱歉，没有找到相关信息');//TTS语音播报
+                } catch (e) {
+                    console.log(e);
+                }
             }
         },
         music: function () {
             if (this.json.operation === 'PLAY') {//如果是播放音乐
                 if (!this.json.semantic.slots) {
-                    //window.jsm.startTts('你想听哪个歌手的歌？');//TTS语音播报
+                    try {
+                        window.jsm.startTts('你想听哪个歌手的歌？');//TTS语音播报
+                    } catch (e) {
+                        console.log(e);
+                    }
                 } else {
                     var module = new M();
                     module.musicM({
@@ -50,7 +58,11 @@
                     });
                 }
             } else {
-                //window.jsm.startTts('抱歉，没有找到相关信息');//TTS语音播报
+                try {
+                    window.jsm.startTts('抱歉，没有找到相关信息');//TTS语音播报
+                } catch (e) {
+                    console.log(e);
+                }
             }
         },
         other: function () {
@@ -64,7 +76,11 @@
                 },
                 function (data) {
                     $("#content").html(data.text);
-                    //window.jsm.startTts(data.text);//TTS语音播报
+                    try {
+                        window.jsm.startTts(data.text);//TTS语音播报
+                    } catch (e) {
+                        console.log(e);
+                    }
                 }
             )
         },
@@ -81,8 +97,12 @@
     window.understandResultJson = function (json) {
         var iat = new Iat();
         iat.init(json);
-    }
+    };
 
+    //当点击搜索时，会先进行语义理解，然后调用understandResultJson方法
+    $('#write').on('click', function () {
+        window.understandResultJson($('#result').val());
+    });
 
 })(window);
 
@@ -202,10 +222,10 @@ var j = {
     "text": "天气"
 };
 
-// j = {
-//     "rc": 0,
-//     "text": "你好吗"
-// };
+j = {
+    "rc": 0,
+    "text": "你好吗"
+};
 
-// understandResultJson(JSON.stringify(j));
+understandResultJson(JSON.stringify(j));
 
